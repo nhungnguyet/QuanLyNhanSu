@@ -1,0 +1,102 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QLNS_CSDL
+{
+    public partial class fQLNS : Form
+    {
+        public fQLNS()
+        {
+            InitializeComponent();
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chấmCôngVàLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fSLDLieu frm = new fSLDLieu();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDoimatkhau frm = new fDoimatkhau();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fQLNS_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void tiềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelChay.Left += dx;
+
+            // Nếu label chạm biên phải hoặc trái thì đổi hướng
+            if (labelChay.Right >= this.ClientSize.Width || labelChay.Left <= 0)
+            {
+                dx = -dx;
+            }
+        }
+    }
+}
