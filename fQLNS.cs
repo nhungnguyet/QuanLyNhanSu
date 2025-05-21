@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +15,8 @@ namespace QLNS_CSDL
         public fQLNS()
         {
             InitializeComponent();
-            
+            btSaoluu.Click += btSaoluu_Click;
+            btDong.Click += btDong_Click;
 
         }
 
@@ -73,5 +74,23 @@ namespace QLNS_CSDL
         {
             this.Close();
         }
+
+        private void btDong_Click(object sender, EventArgs e)
+        {
+            tabControl3.SelectedTab = tabPage7;
+            tabControl1.SelectedIndex = 0;
+        }
+
+
+        private void btSaoluu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sao lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }
+
+
+
+
+ 
